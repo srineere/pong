@@ -6,7 +6,7 @@
 -- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 local love11 = love.getVersion() == 11
-local getDPI = love11 and love.window.getDPIScale or love.window.getPixelScale
+local getDPI = love11 and love.window.getDPIScale or love.window.getDPIScale
 
 local push = {
   
@@ -181,7 +181,7 @@ function push:finish(shader)
     love.graphics.pop()
 
     local white = love11 and 1 or 255
-    love.graphics.setColor(white, white, white)
+    love.graphics.setColor(white/255, white/255, white/255)
 
     --draw canvas
     love.graphics.setCanvas(_render.canvas)
