@@ -237,10 +237,21 @@ function love.update(dt)
         player1.dy = 0
     end
 
-    -- player 2
-    if love.keyboard.isDown('up') then
+    -- player 2 - manual
+    -- if love.keyboard.isDown('up') then
+    --     player2.dy = -PADDLE_SPEED
+    -- elseif love.keyboard.isDown('down') then
+    --     player2.dy = PADDLE_SPEED
+    -- else
+    --     player2.dy = 0
+    -- end
+
+    -- You need to change ai to manual in the comments
+
+    -- player 2 - AI
+    if ball.y < player2.y then
         player2.dy = -PADDLE_SPEED
-    elseif love.keyboard.isDown('down') then
+    elseif ball.y > player2.y then
         player2.dy = PADDLE_SPEED
     else
         player2.dy = 0
